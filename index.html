@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <title>To Do List</title>
+</head>
+<body>
+    <h1 class="title">Stuffs to be done</h1>
+    <div class="all-tasks">
+        <h2 class="task-list-title">
+            <p class="fw-bold">My Lists</p>
+        </h2>
+        <ul class="task-list" data-lists></ul>
+        <form action="" data-new-list-form >
+            <input type="text" class="new list" data-new-list-input placeholder="new list name" aria-label="new list name">
+            <button class="btn list" aria-label="create new list">+</button>
+        </form>
+    </div>
+    <div class="todo-list" data-list-display-container >
+        <div class="todo-header">
+            <h2 class="list-title" data-list-title ><p class="fw-bold">Youtube</p></h2>
+            <p class="task-count" data-list-count>3 tasks remaining</p>
+        </div>
+        <div class="todo-body">
+            <div class="tasks" data-tasks></div>
+            <div class="new-task-creator">
+                <form action="" data-new-task-form >
+                    <input type="text" class="new task" data-new-task-input placeholder="new task name" aria-label="new task name">
+                    <button class="btn task" aria-label="create new task">+</button>
+                </form>
+            </div>
+            <div class="delete-stuff">
+                <button class="btn delete" data-clear-complete-tasks-button>Clear Completed Tasks</button>
+                <button class="btn delete" data-delete-list-button >Delete Lists</button>
+            </div>
+        </div>
+    </div>
+    <template id="task-template">
+        <div class="task">
+            <input type="checkbox">
+            <label>
+                <span class="custom-checkbox"></span>
+            </label>
+        </div>
+    </template>
+</body>
+</html>
